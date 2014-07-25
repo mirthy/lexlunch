@@ -16,5 +16,5 @@ exports.endpoints = [
 	{ method: 'GET',    path: '/logout',         config: Authentication.logout },
 	{ method: 'POST',   path: '/register',       config: Authentication.register },
 
-	{ method: 'GET',	path: '/users',			 config: Users.getAll 	}
+	{ method: 'GET',	path: '/api/users',		 config: Users.getAll 	}
 ];
