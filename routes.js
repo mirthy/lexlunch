@@ -1,6 +1,7 @@
 var Pages = require('./controllers/pages');
 var Authentication = require('./controllers/authentication');
 var Users = require('./controllers/users');
+var Orders = require('./controllers/orders');
 
 /**
  * Contains the list of all routes, i.e. methods, paths and the config functions
@@ -16,5 +17,7 @@ exports.endpoints = [
 	{ method: 'GET',    path: '/logout',         config: Authentication.logout },
 	{ method: 'POST',   path: '/register',       config: Authentication.register },
 
-	{ method: 'GET',	path: '/api/users',		 config: Users.getAll 	}
+	{ method: 'GET',	path: '/api/users',		 config: Users.getAll 	},
+
+	{ method: 'GET',	path: '/api/orders',	 config: Orders.getAll	}
 ];
