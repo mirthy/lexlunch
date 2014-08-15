@@ -9,9 +9,10 @@ exports.getAll = {
 
 			} else {
 				reply(_.map(orders, function(fullOrder) {
-						return {
-							id: fullOrder._id,
-						};
+						return fullOrder; //{
+							
+							//id: fullOrder._id,
+						//};
 				}));
 			}
 		});
@@ -31,17 +32,16 @@ exports.getById = {
 };
 
 exports.createOrder = {
-	validate: {
-		payload :{
-			captain: Joi.string().required(),
-			provider: Joi.string().required(),
-			acquisitionMethod: Joi.string().required(),
-			status: Joi.string().required()
-		}
-	},
 	handler: function(request, reply) {
-		var order = new Order(request.payload);
+		console.log(request.payload);
+		var order = new Order( 
+			{ captain: request.payload.captain,
+				provider: request.payload.provider,
+				acquisitionMethod: request.payload.acquisitionMethod,
+				status: request.payload.status
+			}
+			);
 		order.save();
-		return order;
+		reply(order);
 	}	
 };

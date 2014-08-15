@@ -7,9 +7,6 @@ var orderItemSchema = new Mongoose.Schema({
 	orderId: {type:Mongoose.Schema.Types.ObjectId, required:true}
 });
 
-
-orderItemSchema.plugin(require('passport-local-mongoose'));
-
 //create the model and add it to the exports
 var orderItem = exports.OrderItem = Mongoose.model('OrderItem', orderItemSchema, 'OrderItems');
 
