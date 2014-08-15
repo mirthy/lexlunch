@@ -19,5 +19,7 @@ exports.endpoints = [
 
 	{ method: 'GET',	path: '/api/users',		 config: Users.getAll 	},
 
-	{ method: 'GET',	path: '/api/orders',	 config: Orders.getAll	}
+	{ method: 'GET',	path: '/api/orders',	 config: Orders.getAll	},
+	{ method: 'GET',	path: '/api/orders/{id}',	 config: Orders.getById	},
+	{ method: 'POST',	path: '/api/orders',	 config: Orders.createOrder }
 ];

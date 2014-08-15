@@ -9,7 +9,7 @@ var orderSchema = new Mongoose.Schema({
 	closeTime: {type:Date, required:true, default:Date.now(30*60*1000)},
 	acquisitionMethod: {type:String, required:true},
 	status: {type:String, required:true},
-	orderItems: [{type:OrderItem}]
+	orderItems: [{type:Mongoose.Schema.Types.ObjectId}]
 });
 
 
