@@ -1,4 +1,5 @@
 var Mongoose = require('../database').Mongoose;
+var OrderItem = require('orderItem');
 
 var orderSchema = new Mongoose.Schema({
 	captain: {type:Mongoose.Schema.Types.ObjectId, required:true},
@@ -8,7 +9,7 @@ var orderSchema = new Mongoose.Schema({
 	closeTime: {type:Date, required:true, default:Date.now(30*60*1000)},
 	acquisitionMethod: {type:String, required:true},
 	status: {type:String, required:true},
-	orderItems: [{type:orderItem}]
+	orderItems: [{type:OrderItem}]
 });
 
 
