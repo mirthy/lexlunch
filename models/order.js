@@ -1,7 +1,7 @@
 var Mongoose = require('../database').Mongoose;
 
 var orderSchema = new Mongoose.Schema({
-	captain: {type:Schema.Types.ObjectId, required:true},
+	captain: {type:Mongoose.Schema.Types.ObjectId, required:true},
 	provider: {type:String, required:true},
 	date: {type:Date, required:true, default:Date.now},
 	miscCharges: {type:Number, required:true, default:0},
