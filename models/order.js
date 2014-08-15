@@ -1,5 +1,5 @@
 var Mongoose = require('../database').Mongoose;
-var OrderItem = require('orderItem');
+var OrderItem = require('./orderItem').OrderItem;
 
 var orderSchema = new Mongoose.Schema({
 	captain: {type:Mongoose.Schema.Types.ObjectId, required:true},
