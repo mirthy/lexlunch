@@ -1,8 +1,8 @@
 module.exports = {
 	mongo: {
-		username: process.env.MONGO_USER,
-		password: process.env.MONGO_PASSWORD,
-		url: process.env.MONGO_URL,
+		username: process.env.MONGO_USER || "",
+		password: process.env.MONGO_PASSWORD || "",
+		url: process.env.MONGO_URL || 'localhost',
 		database: 'lexlunch'
 	},
 	server: {
